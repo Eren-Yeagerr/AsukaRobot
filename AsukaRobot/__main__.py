@@ -144,33 +144,33 @@ ACRUISE = """
 """
 
 Asuka_IMG = (
-      "https://telegra.ph/file/645e0b5ca6382d6d73ab5.jpg",
-      "https://telegra.ph/file/3c6cb9b50381170c95278.jpg",
-      "https://telegra.ph/file/4e964395ea9138c943dce.jpg",
-      "https://telegra.ph/file/6e6a21dda7dd3525f7f94.jpg",
-      "https://telegra.ph/file/3c6cb9b50381170c95278.jpg",
+      "https://telegra.ph/file/79cbf1bef46dc9ae61add.jpg",
+      "https://telegra.ph/file/dd0f97137edc20256ac9d.jpg",
+      "https://telegra.ph/file/bc19d5722ecc5edf38cbc.jpg",
+      "https://telegra.ph/file/e3e22e509da41e96250f1.jpg",
+      "https://telegra.ph/file/7838d00e1293dda0f7fda.png",
 )
 
-TEXXT = "Yes B!tch, I Am Alive And Working Fine.\nCheck Out The Buttons Mentioned Below.",
+TEXXT = "ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ ! ᴀɴᴅ ᴡᴏʀᴋɪɴɢ ғɪɴᴇ.\nᴄʜᴇᴄᴋ ᴏᴜᴛ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ᴍᴇɴᴛɪᴏɴᴇᴅ ʙᴇʟᴏᴡ.",
 
 Asuka_N_IMG = (
-      "https://telegra.ph/file/0b5e88c90238c357641a7.jpg",
-      "https://telegra.ph/file/3c93a66c6751088a00fbd.jpg",
-      "https://telegra.ph/file/3b4eed00be4dfaa189fff.jpg",
-      "https://telegra.ph/file/6cbc8452a2796ad58c2f9.jpg",
-      "https://telegra.ph/file/3c6cb9b50381170c95278.jpg"
+      "https://telegra.ph/file/4e0f6c9ae5db4bf131c35.jpg",
+      "https://telegra.ph/file/169adfe552faafc3fdef5.jpg",
+      "https://telegra.ph/file/1c2f2870ca6324cb7306f.png",
+      "https://telegra.ph/file/c7e4a20241144554b7728.jpg",
+      "https://telegra.ph/file/cf3a6cf7e8b9471d3f375.jpg"
 
 )
 
-Asuka_PIC = "https://telegra.ph/file/eedea672a770ec92363bd.jpg"
+Asuka_PIC = "https://telegra.ph/file/f34b09bcdc7456f1cc30f.jpg"
 
-Asuka_VID = "https://telegra.ph/file/8d49b6f49362e7778785e.jpg"
+Asuka_VID = "https://telegra.ph/file/2aff5dd550eff83142424.jpg"
 
-PM_PHOTO = "https://telegra.ph/file/fefd65c0e2ccb00453407.jpg"
+PM_PHOTO = "https://telegra.ph/file/bc19d5722ecc5edf38cbc.jpg"
 
-Asuka_DISPACHER_PIC = "https://telegra.ph/file/d03f381c8178a8fd2dc27.jpg"
+Asuka_DISPACHER_PIC = "https://telegra.ph/file/d29f7edf58ea3eb178b8a.jpg"
 
-DONATE_STRING = """ Adding Me To Your Groups Is Donation For Me Though I Would Appreciate If You Join My Creator Group @WingsOfFreedom2"""
+DONATE_STRING = """ Adding Me To Your Groups Is Donation For Me Though I Would Appreciate If You Join My Creator's Group @WingsOfFreedom2"""
 
 IMPORTED = {}
 MIGRATEABLE = []
