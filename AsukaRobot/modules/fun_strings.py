@@ -367,8 +367,8 @@ SEX  = (
     "Ahhh... Not There, Ahhhhhh...",
     "I'm Ready For A White Shower, Daddy!")
 
-HEMTAI  = (
-    "• [Uncensored Hentai](https://t.me/+S6Kq1YC5bxkwZjgx0) \n• [Pornhwas](https://t.me/PornhwaHeaven)",
-    "• [Uncensored Hentai](https://t.me/+S6Kq1YC5bxkwZjgx0) \n• [Pornhwas](https://t.me/PornhwaHeaven)",
-    "• [Uncensored Hentai](https://t.me/+S6Kq1YC5bxkwZjgx0) \n• [Pornhwas](https://t.me/PornhwaHeaven)",)
+
+
+
+
 
