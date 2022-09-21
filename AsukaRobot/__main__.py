@@ -316,10 +316,10 @@ def start(update: Update, context: CallbackContext):
                   [
                        InlineKeyboardButton(
                              text="Support",
-                             url="t.me/AsukaSupport"),
+                             url="t.me/WoFBotsSupport"),
                        InlineKeyboardButton(
                              text="Updates",
-                             url="t.me/AsukaUpdates")
+                             url="t.me/WoFBotsSupport")
                      ]
                 ]
             ),
@@ -386,7 +386,7 @@ def help_button(update, context):
             help_buttons.append(
                 [
                     InlineKeyboardButton(text="Back", callback_data="help_back"),
-                    InlineKeyboardButton(text='Support', url='https://t.me/AsukaSupport')
+                    InlineKeyboardButton(text='Support', url='https://t.me/WoFBotsSupport')
                 ]
                     )
             query.message.edit_caption(
@@ -452,8 +452,8 @@ def about_callback_data(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Support", url="t.me/AsukaSupport"),
-                    InlineKeyboardButton(text="Updates", url="t.me/AsukaUpdates"),
+                    InlineKeyboardButton(text="Support", url="t.me/WoFBotsSupport"),
+                    InlineKeyboardButton(text="Updates", url="t.me/WoFBotsSupport"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="asuka_")
@@ -473,10 +473,10 @@ def repo_callback_data(update, context):
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
-                 [
-                    InlineKeyboardButton(text="Source Code", url="https://github.com/RimuruDemonlord/AsukaRobot"),
-                    InlineKeyboardButton(text="Kaizuryu", url="t.me/TheKaizuryu"),
-                 ],
+                 
+                   
+                   
+                 
                  [
                     InlineKeyboardButton(text="Back", callback_data="asuka_")
                  ],
@@ -507,7 +507,7 @@ def asuka_callback_data(update, context):
                  ],
                  [
                     InlineKeyboardButton(text="Support", callback_data="about_back"),
-                    InlineKeyboardButton(text="Source Code", url="https://github.com/RimuruDemonlord/AsukaRobot"),
+                   
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="asuka_back")
@@ -559,7 +559,7 @@ def get_help(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                  InlineKeyboardButton(text=" Click here", url="https://t.me/AsukaRobot?start=help")
+                  InlineKeyboardButton(text=" Click here", url="https://t.me/MikuuNakano_Bot?start=help")
                   ]
                 ]
             ),
@@ -798,7 +798,7 @@ def main():
                   [
                        InlineKeyboardButton(
                              text="Off-Topic",
-                             url="https://t.me/Anime_Chat_XKaizuryu")
+                             url="https://t.me/WoFBotsSupport")
                      ]
                 ]
             ),
@@ -852,7 +852,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info("Finally Asuka Is Online")
+        LOGGER.info("Finally Miku Is Online")
         allowed_updates = ['message', 'edited_message', 'callback_query', 'callback_query', 'my_chat_member',
                            'chat_member', 'chat_join_request', 'channel_post', 'edited_channel_post', 'inline_query']
         updater.start_polling(
