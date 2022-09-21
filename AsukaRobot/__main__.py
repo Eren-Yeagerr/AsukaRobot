@@ -60,7 +60,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 PM_START_TEXT = """
-*Hey B!tch {},*
+*Hey {},*
 *Myself ᴍɪᴋᴜ ɴᴀᴋᴀɴᴏ, ᴛʜᴇ ᴍᴏsᴛ ᴩᴏᴡᴇʀғᴜʟ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴡɪᴛʜ sᴏᴍᴇ ᴀᴡᴇsᴏᴍᴇ ᴀɴᴅ ᴜsᴇғᴜʟ ғᴇᴀᴛᴜʀᴇs.*
 
 
@@ -75,15 +75,15 @@ PM_START_TEXT = """
 buttons = [
     [
                         InlineKeyboardButton(
-                             text="➕️ Add Asuka To Your Chat ➕️",
-                             url="https://t.me/AsukaRobot?startgroup=true"),
+                             text="➕️ Add Miku To Your Chat ➕️",
+                             url="https://t.me/MikuuNakano_Bot?startgroup=true"),
                     ],
                    [
+                       
+                             
+                             
                        InlineKeyboardButton(
-                             text="Kaizuryu",
-                             url="https://t.me/TheKaizuryu"),
-                       InlineKeyboardButton(
-                             text="About Asuka",
+                             text="About ᴍɪᴋᴜ",
                              callback_data="asuka_"),
                    ],
                   [
@@ -98,18 +98,18 @@ ABOUT1 = """
 """
 
 ABOUT2 = """
-*‣ Asuka Support Chats*\nJoin My Support Group/Channel For Reporting Problems And Updates On @AsukaRobot.
+*‣ ᴍɪᴋᴜ ɴᴀᴋᴀɴᴏ Support Chats*\nJoin My Support Group/Channel For Reporting Problems And Updates On @WoFBotsSupport.
 """
 
 REPO_TXT = """
 *‣ Owner:*
-• [Xelcius](t.me/xelcius)
+• [𝒍𝒆𝒗𝒊](t.me/HSSLevii)
 \n*‣ Note:*
-• If You Want This Bot's Repo You Can Get It From The Button Below.
-• Report Any Kind Of Bugs At [Support](t.me/AsukaSupport)
+• 
+• Report Any Kind Of Bugs At [Support](t.me/WoFBotsSupport)
 """
 
-ABOUT3 = """Hello [{}], My name is *Asuka Langley Soryu*. A Powerful Telegram Group Management Bot built to help you manage Group easily.
+ABOUT3 = """Hello [{}], My name is *Miku Nakano*. A Powerful Telegram Group Management Bot built to help you manage Group easily.
             \n ‣ I can Restrict Users.
             \n ‣ I can Greet Users with customizable welcome message and even set a group rules
             \n ‣ I have an advanced Anti-Flood System which will help you to safe group from Spammmer.
@@ -120,7 +120,7 @@ ABOUT3 = """Hello [{}], My name is *Asuka Langley Soryu*. A Powerful Telegram Gr
             \n\n*If you have any Question, You can join Support Chat. My Developer Team will Answer. Check Support Button Below*"""
 
 HELP_STRINGS = """
-Hey [{}] *Asuka* here!
+Hey [{}] *Miku* here!
 I Help Admins To Manage Their Groups!
 Main commands available :
  ‣ /help: PM's you this message.
@@ -170,7 +170,7 @@ PM_PHOTO = "https://telegra.ph/file/fefd65c0e2ccb00453407.jpg"
 
 Asuka_DISPACHER_PIC = "https://telegra.ph/file/d03f381c8178a8fd2dc27.jpg"
 
-DONATE_STRING = """ Adding Me To Your Groups Is Donation For Me Though I Would Appreciate If You Join My Creator's Network @TheKaizuryu"""
+DONATE_STRING = """ Adding Me To Your Groups Is Donation For Me Though I Would Appreciate If You Join My Creator Group @WingsOfFreedom2"""
 
 IMPORTED = {}
 MIGRATEABLE = []
