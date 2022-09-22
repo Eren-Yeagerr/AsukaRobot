@@ -308,8 +308,8 @@ def start(update: Update, context: CallbackContext):
         first = update.effective_user.full_name
         chat = update.effective_chat.title
         update.effective_message.reply_video(
-                video="https://telegra.ph/file/c49829f9f5d65947cbc7e.mp4",
-                caption="Yes B!tch, I Am Alive And Working Fine. \nCheck Out The Buttons Mentioned Below.",
+                video="https://telegra.ph/file/2508011350555b378ede1.mp4",
+                caption="**I Am Alive Baby ❤️ And Working Fine.** \n**Check Out The Buttons Mentioned Below.**",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
