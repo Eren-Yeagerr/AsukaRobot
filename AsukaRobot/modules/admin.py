@@ -985,13 +985,13 @@ def adminlist(update, context):
         # if user.username:
         #    name = escape_markdown("@" + user.username)
         if status == "creator":
-            text += "\n• Creator:"
+            text += "\n 🌏 Creator:"
             text += "\n<code> • </code>{}\n".format(name)
 
             if custom_title:
                 text += f"<code> ┗━ {html.escape(custom_title)}</code>\n"
 
-    text += "\n• Admins:"
+    text += "\n💫 Admins:"
 
     custom_admin_list = {}
     normal_admin_list = []
