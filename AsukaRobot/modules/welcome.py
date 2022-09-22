@@ -252,16 +252,16 @@ def new_member(update: Update, context: CallbackContext):
                     reply_to_message_id=reply,
                 parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
-                [
-                  [                  
+                
+                             
                        
                             
                             
                        
                            
                             
-                     ],
-                     [                  
+                     
+                                    
                      
                            
                             
