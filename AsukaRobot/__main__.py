@@ -503,7 +503,7 @@ def asuka_callback_data(update, context):
                 [
                  [
                     InlineKeyboardButton(text="Try Inline", switch_inline_query_current_chat=""),
-                    InlineKeyboardButton(text="Developer", url="t.me/Xelcius"),
+                    InlineKeyboardButton(text="Developer", url="t.me/HssLevii"),
                  ],
                  [
                     InlineKeyboardButton(text="Support", callback_data="about_back"),
