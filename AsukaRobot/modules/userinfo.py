@@ -522,35 +522,35 @@ def info(update: Update, context: CallbackContext):
 
         pass  # don't crash if api is down somehow...
 
-    disaster_level_present = False
+    disaster_level_present = True
 
     if user.id == OWNER_ID:
 
         text += "\n\n• Disaster Level: God"
 
-        disaster_level_present = True
+        disaster_level_present = False
 
     elif user.id in DEV_USERS:
 
-        text += "\n\n• Disaster Level: Evangelion Master"
+        text += "\n\n• Disaster Level: Master"
 
         disaster_level_present = True
 
     elif user.id in DRAGONS:
 
-        text += "\n\n• Disaster Levl: Evangelion Pilot"
+        text += "\n\n• Disaster Levl: Dragon🐉"
 
         disaster_level_present = True
 
     elif user.id in DEMONS:
 
-        text += "\n\n• Disaster Level: Evangelion 3.0"
+        text += "\n\n• Disaster Level: Demon😈"
 
         disaster_level_present = True
 
     elif user.id in TIGERS:
 
-        text += "\n\n• Disaster Level: Evangelion 2.0"
+        text += "\n\n• Disaster Level: Tiger🐯"
 
         disaster_level_present = True
 
@@ -562,7 +562,7 @@ def info(update: Update, context: CallbackContext):
 
     elif user.id in WOLVES:
 
-        text += "\n\n• Disaster Level: Evengalion 1.0"
+        text += "\n\n• Disaster Level: Wolve🦊"
 
         disaster_level_present = True
 
