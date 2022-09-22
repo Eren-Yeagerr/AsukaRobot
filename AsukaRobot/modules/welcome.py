@@ -196,7 +196,7 @@ def new_member(update: Update, context: CallbackContext):
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
                 update.effective_message.reply_video(
-                Asuka_IMG, caption= "Behold!!! Owner Of @AsukaRobot Joined Your Chat.",
+                Asuka_IMG, caption= "Behold!!! Owner Of @MikuuNakano_Bot Joined Your Chat.",
                     reply_to_message_id=reply)
                 welcome_log = (f"{html.escape(chat.title)}\n"
                                f"#USER_JOINED\n"
@@ -243,8 +243,8 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome yourself
             elif new_mem.id == bot.id:
                 update.effective_message.reply_photo(
-                WAIFUS_IMG, caption= "Hey {}, I'm {}! Thank You For Adding Me To {}\n"
-                    "Check Out Our Support Channel And Network From The Buttons Below!".format(
+                WAIFUS_IMG, caption= "Hey {}, I'm {}! **❤️ Thanks for adding me to** {}\n"
+                    "**Promote me as administrator of the group, to access all my commands.**".format(
                       user.first_name, context.bot.first_name, chat.title
                     ),
             
@@ -254,21 +254,21 @@ def new_member(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                   [                  
-                       InlineKeyboardButton(
-                             text="Support",
-                             url=f"https://t.me/AsukaSupport"),
-                       InlineKeyboardButton(
-                             text="Kaizuryu",
-                             url="https://t.me/TheKaizuryu")
+                       
+                            
+                            
+                       
+                           
+                            
                      ],
                      [                  
-                       InlineKeyboardButton(
-                             text="Help",
-                             callback_data="help_back"),
-                ] 
-            ]
-        ),
-    )
+                     
+                           
+                            
+                
+            
+        
+    
                 continue
 
             else:
