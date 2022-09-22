@@ -465,44 +465,44 @@ def stats(update, context):
         update.effective_message.reply_photo(
             Asuka_IMG,
             status
-            + "\n*Bot statistics*:\n"
+            + "\nBᴏᴛ Sᴛᴀᴛɪsᴛɪᴄs:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
-            + f"\n\n[Support](https://t.me/{SUPPORT_CHAT}) | [Updates](https://t.me/AsukaUpdates)\n\n"
-            + "\n╘══「 by [The Kaizuryu](https://t.me/TheKaizuryu) 」\n",
-            parse_mode=ParseMode.MARKDOWN,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                  [                  
-                       InlineKeyboardButton(
-                             text="Repo",
-                             url="t.me/AsukaSupport")
-                     ] 
-                ]
-            ),
-        )
+            + f"\n\n[Support](https://t.me/{SUPPORT_CHAT}) | [Updates](https://t.me/WoFBotsSupport)\n\n"
+            + "\n╘══「 by [Wɪɴɢs Oғ Fʀᴇᴇᴅᴏᴍ](https://t.me/WingsOfFreedom2) 」\n",
+           
+            
+                
+                             
+                   
+                            
+                            
+                     
+                
+            
+        
     except BaseException:
         update.effective_message.reply_text(
             (
                 (
                     (
-                        "\n*Bot statistics*:\n"
+                        "\nBᴏᴛ Sᴛᴀᴛɪsᴛɪᴄs:\n"
                         + "\n".join(mod.__stats__() for mod in STATS)
                     )
-                    + f"\n\n[Support](https://t.me/{SUPPORT_CHAT}) | [Updates](https://t.me/AsukaUpdates)\n\n"
+                    + f"\n\n[Support](https://t.me/{SUPPORT_CHAT}) | [Updates](https://t.me/WoFBotsSupport)\n\n"
                 )
-                + "╘══「 by [The Kaizuryu](https://t.me/TheKaizuryu) 」\n"
+                + "╘══「 By [Wɪɴɢs Oғ Fʀᴇᴇᴅᴏᴍ](https://t.me/WingsOfFreedom2) 」\n"
             ),
-            parse_mode=ParseMode.MARKDOWN,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                  [                  
-                       InlineKeyboardButton(
-                             text="Repo",
-                             url="t.me/AsukaSupport")
-                     ] 
-                ]
-            ),
-        )
+         
+           
+                
+                                    
+                      
+                             
+                            
+                    
+                
+           
+        
         
         
 def about_bio(update: Update, context: CallbackContext):
