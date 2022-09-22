@@ -309,7 +309,7 @@ def start(update: Update, context: CallbackContext):
         chat = update.effective_chat.title
         update.effective_message.reply_video(
                 video="https://telegra.ph/file/2508011350555b378ede1.mp4",
-                caption="**I Am Alive Baby ❤️ And Working Fine.** \n**Check Out The Buttons Mentioned Below.**",
+                caption="ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ ❤️ ᴀɴᴅ ᴡᴏʀᴋɪɴɢ ғɪɴᴇ. \nᴄʜᴇᴄᴋ ᴏᴜᴛ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ᴍᴇɴᴛɪᴏɴᴇᴅ ʙᴇʟᴏᴡ.",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
