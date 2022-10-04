@@ -40,7 +40,7 @@ def kukirm(update: Update, context: CallbackContext) -> str:
             )
         else:
             update.effective_message.edit_text(
-                "Asuka Chat Bot Disabled by {}.".format(mention_html(user.id, user.first_name)),
+                "Miku Nakano Chat Bot Disabled by {}.".format(mention_html(user.id, user.first_name)),
                 parse_mode=ParseMode.HTML,
             )
 
@@ -66,7 +66,7 @@ def kukiadd(update: Update, context: CallbackContext) -> str:
             )
         else:
             update.effective_message.edit_text(
-                "Asuka Chat Bot Enabled By {}.".format(mention_html(user.id, user.first_name)),
+                "Miku Nakano Chat Bot Enabled By {}.".format(mention_html(user.id, user.first_name)),
                 parse_mode=ParseMode.HTML,
             )
 
