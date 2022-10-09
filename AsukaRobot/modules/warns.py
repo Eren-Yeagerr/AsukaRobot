@@ -100,7 +100,7 @@ def warn(
                         "Remove Warn", callback_data="rm_warn({})".format(user.id)
                     ),
                     InlineKeyboardButton(
-                        "Rules", url="http://t.me/AsukaRobot?start={}".format(chat.id)
+                        "Rules", url="http://t.me/MikuuNakano_Bot?start={}".format(chat.id)
                     )
                 ]
             ]
