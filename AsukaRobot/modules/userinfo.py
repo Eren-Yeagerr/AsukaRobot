@@ -526,13 +526,13 @@ def info(update: Update, context: CallbackContext):
 
     if user.id == OWNER_ID:
 
-        text += "\n\n• Disaster Level: God"
+        text += "\n\n• Disaster Level: God⚡"
 
         disaster_level_present = False
 
     elif user.id in DEV_USERS:
 
-        text += "\n\n• Disaster Level: Master"
+        text += "\n\n• Disaster Level: Master👨‍🏫"
 
         disaster_level_present = True
 
@@ -562,7 +562,7 @@ def info(update: Update, context: CallbackContext):
 
     elif user.id in WOLVES:
 
-        text += "\n\n• Disaster Level: Wolve🦊"
+        text += "\n\n• Disaster Level: Wolf🦊"
 
         disaster_level_present = True
 
