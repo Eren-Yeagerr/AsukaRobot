@@ -402,13 +402,13 @@ def info(update: Update, context: CallbackContext):
 
                              text="Health❤️?",
 
-                             url="https://t.me/WoFBotsSupport/1161"),
+                             url="https://t.me/WOFBotsUpdates/2"),
 
                        InlineKeyboardButton(
 
                              text="Disasters⚔?",
 
-                             url="https://t.me/WoFBotsSupport/1162"),
+                             url="https://t.me/WOFBotsUpdates/3"),
 
                     ],
 
