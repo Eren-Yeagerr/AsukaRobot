@@ -400,13 +400,13 @@ def info(update: Update, context: CallbackContext):
 
                         InlineKeyboardButton(
 
-                             text="Health",
+                             text="Health❤️?",
 
                              url="https://t.me/WoFBotsSupport/1161"),
 
                        InlineKeyboardButton(
 
-                             text="Disasters",
+                             text="Disasters⚔?",
 
                              url="https://t.me/WoFBotsSupport/1162"),
 
@@ -538,7 +538,7 @@ def info(update: Update, context: CallbackContext):
 
     elif user.id in DRAGONS:
 
-        text += "\n\n• Disaster Levl: Dragon🐉"
+        text += "\n\n• Disaster Level: Dragon🐉"
 
         disaster_level_present = True
 
