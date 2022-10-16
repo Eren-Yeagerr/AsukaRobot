@@ -37,8 +37,8 @@ def afk(update, context):
     REDIS.set(f'afk_time_{update.effective_user.id}', start_afk_time)
     fname = update.effective_user.first_name
     try:
-        update.effective_message.reply_video("{} is now away!{}".format(fname, notice))
-      AFKVID,caption="See You Later {}!".format(fname))
+        update.effective_message.reply_video(
+            AFKVID,caption="See You Later {}!".format(fname))
     except BadRequest:
         pass
 
