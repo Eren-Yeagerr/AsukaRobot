@@ -13,38 +13,6 @@ from telegram.ext import CallbackContext, run_async
 
 GIF_ID = "CgACAgQAAxkBAAILHWBPN8dL8NvxZ9tUfr3_4SdPGqgjAAJeAgACQQrNUlM24z1ISCsTHgQ"
 
-henbuttons = [
-    [
-                        InlineKeyboardButton(
-                             text="Uncensored Hentai",
-                             url="https://t.me/Uncensored_Hemtai"),
-                    ],                
-                   [ 
-                       InlineKeyboardButton(
-                             text="Pornhwa",
-                             url="https://t.me/PornhwaHeaven"),                  
-                       InlineKeyboardButton(
-                             text="Chat",
-                             url="https://t.me/Hentai_Chat_Hanime"),
-                   ],
-    ]
-
-
-    
-                     
-                            
-                           
-            
-                   
-                
-                   
-                                    
-                 
-                        
-                            
-             
-    
-
 @run_async
 def runs(update: Update, context: CallbackContext):
     update.effective_message.reply_text(random.choice(fun_strings.RUN_STRINGS))
@@ -245,20 +213,6 @@ def sex(update: Update, context: CallbackContext):
     reply_animation = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text
     reply_animation(random.choice(fun_strings.SEX))
 
-@run_async
-def hemtai(update: Update, context: CallbackContext):
-    reply_photo = update.effective_message.reply_to_message.reply_photo if update.effective_message.reply_to_message else update.effective_message.reply_photo
-    reply_photo(photo="https://telegra.ph/file/a01a331e69ab69158482e.jpg", caption=f"• Heyy Pervert!!! Join Below •", 
-    reply_markup=InlineKeyboardMarkup(henbuttons),
-    parse_mode=ParseMode.MARKDOWN,)
-
-@run_async
-def animec(update: Update, context: CallbackContext):
-    reply_photo = update.effective_message.reply_to_message.reply_photo if update.effective_message.reply_to_message else update.effective_message.reply_photo
-    reply_photo(photo="https://telegra.ph/file/6deba46d5cc608ba3a59f.jpg", 
-    reply_markup=InlineKeyboardMarkup(anibuttons),
-    parse_mode=ParseMode.MARKDOWN,)
-    
 normiefont = [
     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
     'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
@@ -298,8 +252,6 @@ def weebify(update: Update, context: CallbackContext):
 
 
 __help__ = """
- • `/hemtai`*:* get hentai link
- • `/animec`*:* get anime cruise link
  • `/runs`*:* reply a random string from an array of replies
  • `/slap`*:* slap a user, or get slapped if not a reply
  • `/shrug`*:* get shrug XD
@@ -327,11 +279,9 @@ TOSS_HANDLER = DisableAbleCommandHandler("toss", toss)
 SHRUG_HANDLER = DisableAbleCommandHandler("shrug", shrug)
 BLUETEXT_HANDLER = DisableAbleCommandHandler("bluetext", bluetext)
 RLG_HANDLER = DisableAbleCommandHandler("rlg", rlg)
-ANIMEC_HANDLER = DisableAbleCommandHandler("animec", animec)
 COSPLAY_HANDLER = DisableAbleCommandHandler("cosplay", cosplay)
 DECIDE_HANDLER = DisableAbleCommandHandler("decide", decide)
 SEX_HANDLER = DisableAbleCommandHandler("sex", sex)
-HEMTAI_HANDLER = DisableAbleCommandHandler("hemtai", hemtai)
 SHOUT_HANDLER = DisableAbleCommandHandler("shout", shout)
 WEEBIFY_HANDLER = DisableAbleCommandHandler("weebify", weebify)
 
@@ -349,16 +299,14 @@ dispatcher.add_handler(RLG_HANDLER)
 dispatcher.add_handler(DECIDE_HANDLER)
 dispatcher.add_handler(SEX_HANDLER)
 dispatcher.add_handler(COSPLAY_HANDLER)
-dispatcher.add_handler(ANIMEC_HANDLER)
-dispatcher.add_handler(HEMTAI_HANDLER)
 
 __mod_name__ = "Fun"
 __command_list__ = [
     "runs", "slap", "roll", "toss", "shrug", "bluetext", "rlg", "decide",
-    "sex", "pat", "animec", "sanitize", "hemtai", "shout", "cosplay", "weebify"
+    "sex", "pat", "sanitize", "shout", "cosplay", "weebify"
 ]
 __handlers__ = [
     RUNS_HANDLER, SLAP_HANDLER, PAT_HANDLER, ROLL_HANDLER, TOSS_HANDLER,
     SHRUG_HANDLER, BLUETEXT_HANDLER, RLG_HANDLER, DECIDE_HANDLER, SANITIZE_HANDLER, 
-    SEX_HANDLER, SHOUT_HANDLER, WEEBIFY_HANDLER, HEMTAI_HANDLER, COSPLAY_HANDLER, ANIMEC_HANDLER
+    SEX_HANDLER, SHOUT_HANDLER, WEEBIFY_HANDLER, COSPLAY_HANDLER
 ]
