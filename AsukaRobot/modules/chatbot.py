@@ -1,26 +1,44 @@
+"""
+MIT License
+Copyright (c) 2022 Arsh
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+"""
+
 import json
 import re
-import os
 import html
 import requests
-import AsukaRobot.modules.sql.chatbot_sql as sql
+import Exon.modules.sql.kuki_sql as sql
 
 from time import sleep
-from telegram import ParseMode
-from telegram import (CallbackQuery, Chat, MessageEntity, InlineKeyboardButton,
-                      InlineKeyboardMarkup, Message, Update, Bot, User)
+from telegram import (CallbackQuery, Chat, InlineKeyboardButton,
+                      InlineKeyboardMarkup, ParseMode, Update, User)
 from telegram.ext import (CallbackContext, CallbackQueryHandler, CommandHandler,
-                          DispatcherHandlerStop, Filters, MessageHandler,
-                          run_async)
+                          Filters, MessageHandler,
+                          )
 from telegram.error import BadRequest, RetryAfter, Unauthorized
-from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
+from telegram.utils.helpers import mention_html
 
-from AsukaRobot.modules.helper_funcs.filters import CustomFilters
-from AsukaRobot.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
-from AsukaRobot import dispatcher, updater, SUPPORT_CHAT
-from AsukaRobot.modules.log_channel import gloggable
+from Exon.modules.helper_funcs.filters import CustomFilters
+from Exon.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
+from Exon import dispatcher
+from Exon.modules.log_channel import gloggable
 
-@run_async
+ 
 @user_admin_no_reply
 @gloggable
 def kukirm(update: Update, context: CallbackContext) -> str:
@@ -39,14 +57,11 @@ def kukirm(update: Update, context: CallbackContext) -> str:
                 f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
             )
         else:
-            update.effective_message.edit_text(
-                "Miku Nakano Chat Bot Disabled by {}.".format(mention_html(user.id, user.first_name)),
-                parse_mode=ParseMode.HTML,
-            )
+            query.answer("Chatbot Unactive")
+            query.message.delete()
 
     return ""
 
-@run_async
 @user_admin_no_reply
 @gloggable
 def kukiadd(update: Update, context: CallbackContext) -> str:
@@ -65,27 +80,24 @@ def kukiadd(update: Update, context: CallbackContext) -> str:
                 f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
             )
         else:
-            update.effective_message.edit_text(
-                "Miku Nakano Chat Bot Enabled By {}.".format(mention_html(user.id, user.first_name)),
-                parse_mode=ParseMode.HTML,
-            )
+            query.answer("Chatbot Active")
+            query.message.delete()
 
     return ""
 
-@run_async
 @user_admin
 @gloggable
 def kuki(update: Update, context: CallbackContext):
     user = update.effective_user
     message = update.effective_message
-    msg = "• Choose An Option For Chatbot"
+    msg = "Choose an option"
     keyboard = InlineKeyboardMarkup([[
         InlineKeyboardButton(
-            text="Enable",
+            text="Enable Chatbot",
             callback_data="add_chat({})")],
        [
         InlineKeyboardButton(
-            text="Disable",
+            text="Disable Chatbot",
             callback_data="rm_chat({})")]])
     message.reply_text(
         msg,
@@ -95,7 +107,7 @@ def kuki(update: Update, context: CallbackContext):
 
 def kuki_message(context: CallbackContext, message):
     reply_message = message.reply_to_message
-    if message.text.lower() == "kuki":
+    if message.text.lower() == "Himawari":
         return True
     if reply_message:
         if reply_message.from_user.id == context.bot.get_me().id:
@@ -115,18 +127,17 @@ def chatbot(update: Update, context: CallbackContext):
     if message.text and not message.document:
         if not kuki_message(context, message):
             return
-        anon = message.text
+        Message = message.text
         bot.send_chat_action(chat_id, action="typing")
-        url = f"https://kukiapi.xyz/api/apikey=1356469075-KUKIkq4WMg5FV4/Fallen/Anonymous/message={anon}" 
-        request = requests.get(url) 
-        results = json.loads(request.text) 
-        result = f"{results['reply']}"
-        sleep(0.5)
-        message.reply_text(result)
+        kukiurl = requests.get('https://api.bakufu.tech/api/chatbot/cleverbot?name=himawari&owner=arsh&message='+Message)
+        Kuki = json.loads(kukiurl.text)
+        kuki = Kuki['reply']
+        sleep(0.3)
+        message.reply_text(kuki, timeout=60)
 
 def list_all_chats(update: Update, context: CallbackContext):
     chats = sql.get_all_kuki_chats()
-    text = "<b>Miku Enabled Chats</b>\n"
+    text = "<b>KUKI-Enabled Chats</b>\n"
     for chat in chats:
         try:
             x = context.bot.get_chat(int(*chat))
@@ -140,21 +151,21 @@ def list_all_chats(update: Update, context: CallbackContext):
 
 __help__ = """
 *Admins only Commands*:
-  »  /chatbot *:* Shows chatbot control panel
-
+• /Chatbot*:* Shows chatbot control panel
+*Powered by* @SurveyCorpsXteam
 """
 
 __mod_name__ = "ChatBot"
 
 
-CHATBOTK_HANDLER = CommandHandler("chatbot", kuki )
-ADD_CHAT_HANDLER = CallbackQueryHandler(kukiadd, pattern=r"add_chat" )
-RM_CHAT_HANDLER = CallbackQueryHandler(kukirm, pattern=r"rm_chat" )
+CHATBOTK_HANDLER = CommandHandler("chatbot", kuki, run_async=True)
+ADD_CHAT_HANDLER = CallbackQueryHandler(kukiadd, pattern=r"add_chat", run_async=True)
+RM_CHAT_HANDLER = CallbackQueryHandler(kukirm, pattern=r"rm_chat", run_async=True)
 CHATBOT_HANDLER = MessageHandler(
     Filters.text & (~Filters.regex(r"^#[^\s]+") & ~Filters.regex(r"^!")
-                    & ~Filters.regex(r"^\/")), chatbot, )
+                    & ~Filters.regex(r"^\/")), chatbot, run_async=True)
 LIST_ALL_CHATS_HANDLER = CommandHandler(
-    "allchats", list_all_chats, filters=CustomFilters.dev_filter, )
+    "allchats", list_all_chats, filters=CustomFilters.dev_filter, run_async=True)
 
 dispatcher.add_handler(ADD_CHAT_HANDLER)
 dispatcher.add_handler(CHATBOTK_HANDLER)
