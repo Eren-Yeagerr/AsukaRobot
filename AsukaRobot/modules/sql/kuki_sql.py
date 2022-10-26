@@ -26,7 +26,7 @@ import threading
 
 from sqlalchemy import Column, String
 
-from Exon.modules.sql import BASE, SESSION
+from AsukaRobot.modules.sql import BASE, SESSION
 
 
 class KukiChats(BASE):
