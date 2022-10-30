@@ -29,6 +29,7 @@ from html import escape
 from urllib.parse import quote as urlquote
 
 from bs4 import BeautifulSoup
+from PIL import Image
 from cloudscraper import CloudScraper
 from telegram import (
     InlineKeyboardButton,
