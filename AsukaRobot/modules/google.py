@@ -32,8 +32,8 @@ from bs4 import BeautifulSoup
 from telethon import *
 from telethon.tl.types import *
 
-from Exon import telethn
-from Exon.events import register
+from AsukaRobot import telethn
+from AsukaRobot.events import register
 
 
 @register(pattern="^/img (.*)")
