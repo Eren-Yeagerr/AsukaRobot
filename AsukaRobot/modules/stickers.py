@@ -24,7 +24,6 @@ SOFTWARE.
 
 import math
 import os
-import textwrap
 import urllib.request as urllib
 from html import escape
 from urllib.parse import quote as urlquote
