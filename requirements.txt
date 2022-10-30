@@ -37,7 +37,7 @@ bleach
 ptbcontrib @ git+https://github.com/python-telegram-bot/ptbcontrib.git@907070d129b7cf80b0236d72fb498667b5b22b63
 wikipedia
 git+https://github.com/trentm/python-markdown2
-telethon==1.24.0
+telethon==1.25.0
 spamwatch
 alphabet_detector
 cachetools
