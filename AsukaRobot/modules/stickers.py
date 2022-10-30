@@ -31,7 +31,6 @@ from urllib.parse import quote as urlquote
 
 from bs4 import BeautifulSoup
 from cloudscraper import CloudScraper
-from PIL import Image, ImageDraw, ImageFont
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
@@ -42,11 +41,10 @@ from telegram import (
 from telegram.ext import CallbackContext, CallbackQueryHandler
 from telegram.utils.helpers import mention_html
 
-from ABG.covert import convert_gif
-from Exon import dispatcher
-from Exon import telethn as bot
-from Exon.events import register as asau
-from Exon.modules.disable import DisableAbleCommandHandler
+from Gif.covert import convert_gif
+from AsukaRobot import dispatcher
+from AsukaRobot import telethn as bot
+from AsukaRobot.modules.disable import DisableAbleCommandHandler
 
 combot_stickers_url = "https://combot.org/telegram/stickers?q="
 
