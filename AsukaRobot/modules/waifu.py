@@ -15,7 +15,7 @@ async def ok(event):
     r = requests.get(url)
     e = r.json()
     await event.reply(
-        "**A waifu appeared!** \nAdd them to your harem by sending /wprotecc character name",
+        "**A waifu appeared!** \nAdd them to your harem by sending /protecc character name",
         parse_mode=ParseMode.MARKDOWN,
         file=e["url"])
 
