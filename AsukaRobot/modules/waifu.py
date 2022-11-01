@@ -15,12 +15,12 @@ async def ok(event):
     r = requests.get(url)
     e = r.json()
     await event.reply(
-        "**A waifu appeared!** \nAdd them to your harem by sending /protecc character name",
+        "**A waifu appeared!** \nAdd them to your harem by sending /sprotecc character name",
         parse_mode=ParseMode.MARKDOWN,
         file=e["url"])
 
 
-@bot(pattern="[/!]protecc")
+@bot(pattern="[/!]sprotecc")
 async def ok(event):
     await event.reply(
         "OwO you protecc'd A Waifu This waifu has been added to your harem.")
