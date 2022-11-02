@@ -44,9 +44,6 @@ def user_can_changeinfo(chat: Chat, user: User, bot_id: int) -> bool:
 def user_can_promote(chat: Chat, user: User, bot_id: int) -> bool:
     return chat.get_member(user.id).can_promote_members
 
-def is_demon_plus(chat: Chat, user_id: int, member: ChatMember = None) -> bool:
-    return user_id in DEMONS or user_id in DRAGONS or user_id in DEV_USERS
-
 def can_manage_voice_chats(chat: Chat, user: User, bot_id: int) -> bool: 
     return chat.get_member(user.id).can_manage_voicechats
 
@@ -164,29 +161,6 @@ def sudo_plus(func):
 
     return is_sudo_plus_func
 
-def stats_plus(func):
-    @wraps(func)
-    def is_stats_plus_func(update: Update, context: CallbackContext, *args, **kwargs):
-        bot = context.bot
-        user = update.effective_user
-        chat = update.effective_chat
-
-        if user and is_stats_plus(chat, user.id):
-            return func(update, context, *args, **kwargs)
-        if not user:
-            pass
-        elif DEL_CMDS and " " not in update.effective_message.text:
-            try:
-                update.effective_message.delete()
-            except:
-                pass
-        else:
-            update.effective_message.reply_text(
-                "Asuka stats is just for Dev User",
-            )
-
-    return is_sudo_plus_func
-
 
 def support_plus(func):
     @wraps(func)
@@ -222,23 +196,6 @@ def whitelist_plus(func):
         )
 
     return is_whitelist_plus_func
-
-def demon_plus(func):
-    @wraps(func)
-    def is_demon_plus_func(update: Update, context: CallbackContext, *args, **kwargs):
-        bot = context.bot
-        user = update.effective_user
-        chat = update.effective_chat
-
-        if user and is_demon_plus(chat, user.id):
-            return func(update, context, *args, **kwargs)
-        if DEL_CMDS and " " not in update.effective_message.text:
-            try:
-                update.effective_message.delete()
-            except:
-                pass
-
-    return is_demon_plus_func
 
 
 def user_admin(func):
@@ -460,7 +417,7 @@ def user_can_change(func):
         member = update.effective_chat.get_member(user)	
         
 
-        if not (member.can_change_info or member.status == "creator") and not user in SUDO_USERS:
+        if not (member.can_change_info or member.status == "creator") and not user in DRAGONS:
             update.effective_message.reply_text("You are missing the following rights to use this command: \nCanChangeInfo")
                    	
             return ""	
@@ -469,6 +426,6 @@ def user_can_change(func):
 
     return info_changer
 
-from AsukaRobot.modules import connection
+from MikuXProBot.modules import connection
 
 connected = connection.connected
