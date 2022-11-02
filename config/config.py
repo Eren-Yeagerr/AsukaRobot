@@ -34,7 +34,7 @@ from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
     WORKERS = int(getenv('WORKERS', "8"))
     BAN_STICKER = getenv('BAN_STICKER',
                                  'CAADAgADOwADPPEcAXkko5EB3YGYAg')
-    ALLOW_EXCL = getenv('ALLOW_EXCL', "true")
+    ALLOW_EXCL = getenv('ALLOW_EXCL', "True")
     CASH_API_KEY = getenv('CASH_API_KEY', "-xyz")
     TIME_API_KEY = getenv('TIME_API_KEY', "-xyz")
     AI_API_KEY = getenv('AI_API_KEY', "")
