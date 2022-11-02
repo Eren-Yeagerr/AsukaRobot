@@ -426,6 +426,6 @@ def user_can_change(func):
 
     return info_changer
 
-from MikuXProBot.modules import connection
+from AsukaRobot.modules import connection
 
 connected = connection.connected
