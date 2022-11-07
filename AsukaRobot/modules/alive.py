@@ -60,9 +60,3 @@ async def hmm(yes):
     Asuka += f"Thanks For Adding Me In {yes.chat.title}"
     BUTTON = [[Button.url("Support Chat", "https://t.me/WoFBotsSupport"), Button.url("Updates", "https://t.me/WoFBotsSupport")]]
     on = await borg.send_file(yes.chat_id, file="https://telegra.ph/file/4e0f6c9ae5db4bf131c35.jpg",caption=Asuka, buttons=BUTTON)
-
-@register(pattern=("/repo"))
-async def repo(event):
-    Asuka = f"**Hey [{event.sender.first_name}](tg://user?id={event.sender.id}), Click The Button Below To Get My Repo**\n\n"
-    BUTTON = [[Button.url("GitHub", "https://github.com"), Button.url("Developer", "https://t.me/HSSLevii")]]
-    await borg.send_file(event.chat_id, file="https://telegra.ph/file/c7e4a20241144554b7728.jpg", caption=Asuka, buttons=BUTTON)
