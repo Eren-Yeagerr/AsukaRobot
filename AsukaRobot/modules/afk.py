@@ -8,14 +8,14 @@ from telegram import MessageEntity, ParseMode
 from telegram.error import BadRequest
 from telegram.ext import Filters, MessageHandler, run_async
 
-from AsukaRobot import dispatcher
-from AsukaRobot.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
-from AsukaRobot.modules.redis.afk_redis import start_afk, end_afk, is_user_afk, afk_reason
-from AsukaRobot import REDIS
-from AsukaRobot.modules.users import get_user_id
+from NekoRobot import dispatcher
+from NekoRobot.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
+from NekoRobot.modules.redis.afk_redis import start_afk, end_afk, is_user_afk, afk_reason
+from NekoRobot import REDIS
+from NekoRobot.modules.users import get_user_id
 
-from AsukaRobot.modules.helper_funcs.alternate import send_message
-from AsukaRobot.modules.helper_funcs.readable_time import get_readable_time
+from NekoRobot.modules.helper_funcs.alternate import send_message
+from NekoRobot.modules.helper_funcs.readable_time import get_readable_time
 
 AFK_GROUP = 7
 AFK_REPLY_GROUP = 8
@@ -168,7 +168,7 @@ AFK_REGEX_HANDLER = MessageHandler(Filters.regex("(?i)brb"), afk)
 NO_AFK_HANDLER = MessageHandler(Filters.all & Filters.chat_type.groups, no_longer_afk, run_async=True)
 AFK_REPLY_HANDLER = MessageHandler(Filters.all & Filters.chat_type.groups, reply_afk, run_async=True)
 
-dispatcher.add_handler(AFK_HANDLER, AFK_GROUP)
-dispatcher.add_handler(AFK_REGEX_HANDLER, AFK_GROUP)
-dispatcher.add_handler(NO_AFK_HANDLER, AFK_GROUP)
-dispatcher.add_handler(AFK_REPLY_HANDLER, AFK_REPLY_GROUP)
+NEKO_PTB.add_handler(AFK_HANDLER, AFK_GROUP)
+NEKO_PTB.add_handler(AFK_REGEX_HANDLER, AFK_GROUP)
+NEKO_PTB.add_handler(NO_AFK_HANDLER, AFK_GROUP)
+NEKO_PTB.add_handler(AFK_REPLY_HANDLER, AFK_REPLY_GROUP)
